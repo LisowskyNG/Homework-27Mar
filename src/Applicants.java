@@ -14,6 +14,19 @@ public class Applicants {
 
     @Override
     public String toString() {
-        return faculty + ". " + name;
+        return "Факультет " +faculty + ". Абитуриент " + name;
+    }
+    Applicants [] applicants = new Applicants[12];
+
+    public void addApplicants(String faculty, String name) {
+        Applicants appl = new Applicants(faculty, name);
+        for (int i = 0; i < applicants.length; i++) {
+            if (applicants[i] == null) {
+                applicants[i] = appl;
+                //System.out.println("applicants[i] = " + applicants[i] + " " +i);
+                return;
+            }
+        }
+
     }
 }

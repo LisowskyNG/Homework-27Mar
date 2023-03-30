@@ -1,9 +1,19 @@
 public class Hogwarts {
 
-    public Applicants applicants;
+    private Applicants applicants;
 
-    //private final int magicPower;
-    //private final int apparition;
+    private int magicPower;
+    private int apparition;
+
+    public Hogwarts (Applicants applicants) {
+            this.applicants = applicants;
+            this.magicPower = (int) ((Math.random() * (100 - 1)) + 1);
+            this.apparition = (int) ((Math.random() * (100 - 1)) + 1);
+    }
+    public Applicants getApplicants() {return applicants;}
+    public int getMagicPower() {return magicPower;}
+    public int getApparition() {return apparition;}
+
 
 
 
