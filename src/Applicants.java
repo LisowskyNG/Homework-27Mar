@@ -12,5 +12,8 @@ public class Applicants {
 
     public String getName() {return name;}
 
-
+    @Override
+    public String toString() {
+        return faculty + ". " + name;
+    }
 }

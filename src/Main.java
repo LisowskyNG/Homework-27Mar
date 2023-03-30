@@ -16,7 +16,9 @@ public class Main {
         applicants[10] = new Applicants("Slytherin", "Graham Montague");
         applicants[11] = new Applicants("Slytherin", "Gregory Goyle");
 
-
+        for (int i = 0; i < applicants.length; i++) {
+            System.out.println(applicants[i]);
+        }
 
 
         int a = (int) ((Math.random() * (100 - 1)) + 1);
