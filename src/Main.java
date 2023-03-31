@@ -32,32 +32,41 @@ public class Main {
         griffyndorsStudents[0] = new Hogwarts.Griffyndor(applicants[0]);
         System.out.println("griffyndorsStudents[0] = " + griffyndorsStudents[0]);
 
-        //for (int i = 0; i < applicants.length; i++) {
-        //int j = 0;
-        //    int k = 0;
-        //    int l = 0;
-        //    int m = 0;
-        //    if (applicants[i].getFaculty().equals("Gryffindor")) {
-        //        griffyndorsStudents[j] = new Hogwarts.Griffyndor(applicants[i]);
-        //        j++;
-        //        System.out.println(j);
-        //
-        //  } else if (applicants[i].getFaculty().equals("Hufflepuff")) {
-        //       hufflepuffsStudents[k] = new Hogwarts.Hufflepuff(applicants[i]);
-        //      k++;
-        //
-        //    } else if (applicants[i].getFaculty().equals("Raven claw")) {
-        //        rawenClowsStudents[l] = new Hogwarts.RawenClow(applicants[i]);
-        //        l++;
-        //
-        //    } else if (applicants[i].getFaculty().equals("Slytherin")) {
-        //        slytherinsStudents[m] = new Hogwarts.Slytherin(applicants[i]);
-        //        m++;
-        //    }
+        //hufflepuffsStudents[0] = new Hogwarts.Hufflepuff(applicants[3]);
+        //System.out.println("hufflepuffsStudents[0] = " + hufflepuffsStudents[0]);
+
+        //rawenClowsStudents[0] = new Hogwarts.RawenClow(applicants[7]);
+        //System.out.println("rawenClowsStudents[0] = " + rawenClowsStudents[0]);
+
+        //slytherinsStudents[0] = new Hogwarts.Slytherin(applicants[10]);
+        //System.out.println("slytherinsStudents[0] = " + slytherinsStudents[0]);
+            int j = 0;
+            int k = 0;
+            int l = 0;
+            int m = 0;
+        for (int i = 0; i < applicants.length; i++) {
+            if (applicants[i].getFaculty().equals("Gryffindor")) {
+                griffyndorsStudents[j] = new Hogwarts.Griffyndor(applicants[i]);
+                j++;
+                System.out.println("griffyndorsStudents[j] = " + griffyndorsStudents[j]);
+                System.out.println("j = " + j);
+
+            } else if (applicants[i].getFaculty().equals("Hufflepuff")) {
+               hufflepuffsStudents[k] = new Hogwarts.Hufflepuff(applicants[i]);
+              k++;
+
+            } else if (applicants[i].getFaculty().equals("Raven claw")) {
+                rawenClowsStudents[l] = new Hogwarts.RawenClow(applicants[i]);
+                l++;
+
+            } else if (applicants[i].getFaculty().equals("Slytherin")) {
+                slytherinsStudents[m] = new Hogwarts.Slytherin(applicants[i]);
+                m++;
+            }
             //System.out.println("griffyndorsStudents[2] = " + griffyndorsStudents[2]);
 
 
-        //}
+        }
 
     }
 }
