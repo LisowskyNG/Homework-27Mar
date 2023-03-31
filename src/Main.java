@@ -10,7 +10,7 @@ public class Main {
 
         // Зачисляем абитурьентов в Хогвардс тестируя и присваивая им общие для всех качества: силу магиии и трансгресии
         hogwartsStudents[0] = new Hogwarts("Gryffindor", "Harry Potter", 33, 55);
-        hogwartsStudents[1] = new Hogwarts("Gryffindor", "Hermione Granger", 45, 18);
+        hogwartsStudents[1] = new Hogwarts("Gryffindor", "Hermione Granger", 65, 100);
         hogwartsStudents[2] = new Hogwarts("Gryffindor", "Ron Weasley", 14, 96);
         hogwartsStudents[3] = new Hogwarts("Hufflepuff", "Zacharias Smith", 11, 44);
         hogwartsStudents[4] = new Hogwarts("Hufflepuff", "Cedric Diggory", 68, 74);
@@ -45,6 +45,35 @@ public class Main {
                 m++;
             }
         }
+    //Распечатываем студентов всех факультетов со всеми характеристиками используя методы факультетных класов
+        for (int i = 0; i < griffyndorsStudents.length; i++) {
+            System.out.println(griffyndorsStudents[i]);
+        }
+        for (int i = 0; i < hufflepuffsStudents.length; i++) {
+            System.out.println(hufflepuffsStudents[i]);
+        }
+        for (int i = 0; i < rawenClowsStudents.length; i++) {
+            System.out.println(rawenClowsStudents[i]);
+        }
+        for (int i = 0; i < slytherinsStudents.length; i++) {
+            System.out.println(slytherinsStudents[i]);
+        }
+        System.out.println();
+        // сравнение мощности магии среди всех студентов
+        Hogwarts a = hogwartsStudents[1];
+        Hogwarts b = hogwartsStudents[9];
+        a.globalyStudentsCompare(a,b);
+
+        // сравнение учеников внутри каждого факультета
+
+
+
+
+
+
+
+
+
 
 
 
