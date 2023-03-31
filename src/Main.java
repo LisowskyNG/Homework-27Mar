@@ -1,26 +1,31 @@
 public class Main {
 
+    static Applicant [] applicants = new Applicant[12];
+    static Hogwarts[] hogwartsStudents = new Hogwarts[12];
 
     public static void main(String[] args) {
-        Applicants a = new Applicants(null, null);
+
     // Создаем абитурьентов распределяя их сразу по факультетам
-        a.addApplicants("Gryffindor", "Harry Potter");
-        a.addApplicants("Gryffindor", "Hermione Granger");
-        a.addApplicants("Gryffindor", "Ron Weasley");
-        a.addApplicants("Hufflepuff", "Zacharias Smith");
-        a.addApplicants("Hufflepuff", "Cedric Diggory");
-        a.addApplicants("Hufflepuff", "Justin Finch Fletchley");
-        a.addApplicants("Raven claw", "Cho Chang");
-        a.addApplicants("Raven claw", "Padma Patil");
-        a.addApplicants("Raven claw", "Marcus Belby");
-        a.addApplicants("Slytherin", "Draco Malfoy");
-        a.addApplicants("Slytherin", "Graham Montague");
-        a.addApplicants("Slytherin", "Gregory Goyle");
+        applicants[0] = new Applicant("Gryffindor", "Harry Potter");
+        applicants[1] = new Applicant("Gryffindor", "Hermione Granger");
+        applicants[2] = new Applicant("Gryffindor", "Ron Weasley");
+        applicants[3] = new Applicant("Hufflepuff", "Zacharias Smith");
+        applicants[4] = new Applicant("Hufflepuff", "Cedric Diggory");
+        applicants[5] = new Applicant("Hufflepuff", "Justin Finch Fletchley");
+        applicants[6] = new Applicant("Raven claw", "Cho Chang");
+        applicants[7] = new Applicant("Raven claw", "Padma Patil");
+        applicants[8] = new Applicant("Raven claw", "Marcus Belby");
+        applicants[9] = new Applicant("Slytherin", "Draco Malfoy");
+        applicants[10] = new Applicant("Slytherin", "Graham Montague");
+        applicants[11] = new Applicant("Slytherin", "Gregory Goyle");
 
-    // Зачисляем абитурьентов в Хогвардс тестируя и присваивая им общие для всех качества: силу магиии
+        // Зачисляем абитурьентов в Хогвардс тестируя и присваивая им общие для всех качества: силу магиии и трансгресии
+        for (int i = 0; i < hogwartsStudents.length; i++) {
+            Hogwarts temporary = new Hogwarts(applicants[i]);
+            hogwartsStudents[i] = temporary;
+            System.out.println(hogwartsStudents[i]);
+        }
+        // Распределяем студентов согласно выбранных факультетов, тестируем и присваиваем величину уникальных характеристик.
 
-
-        int c = (int) ((Math.random() * (100 - 1)) + 1);
-        System.out.println("c = " + c);
     }
 }

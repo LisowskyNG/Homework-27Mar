@@ -1,36 +1,46 @@
 public class Hogwarts {
 
-    private Applicants applicants;
+    private final Applicant applicant;
+    private final int magicPower;
+    private final int apparition;
 
-    private int magicPower;
-    private int apparition;
-
-    public Hogwarts (Applicants applicants) {
-            this.applicants = applicants;
-            this.magicPower = (int) ((Math.random() * (100 - 1)) + 1);
-            this.apparition = (int) ((Math.random() * (100 - 1)) + 1);
+    public Hogwarts(Applicant applicant) {
+        this.applicant = applicant;
+        this.magicPower = (int) ((Math.random() * (100 - 1)) + 1);
+        this.apparition = (int) ((Math.random() * (100 - 1)) + 1);
     }
-    public Applicants getApplicants() {return applicants;}
+
+    //Блок геттеров и сеттеров
+    public Applicant getApplicant() {return applicant;}
     public int getMagicPower() {return magicPower;}
     public int getApparition() {return apparition;}
 
-
-
-
-    public Hogwarts() {
-    }
-
-
+    @Override
     public String toString() {
-        return null;
+        return "Факультет " +applicant.getFaculty() +
+                ". Студент " +applicant.getName() +
+                ". Магическая сила " +magicPower+
+                ". Трансгрессия " + apparition;
+
+
     }
-    public void compareGlobalSkills(Hogwarts students) {
+    public static class Griffyndor extends Hogwarts {
+        private int nobility;
+        private int honor;
+        private int bravery;
+
+
+        public Griffyndor (Applicant applicant) {
+            super (applicant);
+            this.nobility = (int) ((Math.random() * (100 - 1)) + 1);;
+            this.honor = (int) ((Math.random() * (100 - 1)) + 1);;
+            this. bravery = (int) ((Math.random() * (100 - 1)) + 1);;
+
+            //Блок геттеров, сеттеры не нужны
+
+
+        }
+
     }
-
-
-
-
-
-
 
 }
