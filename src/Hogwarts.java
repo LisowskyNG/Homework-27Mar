@@ -1,23 +1,26 @@
 public class Hogwarts {
 
-    private final Applicant applicant;
+    private final String faculty;
+    private final String name;
     private final int magicPower;
     private final int apparition;
 
-    public Hogwarts(Applicant applicant) {
-        this.applicant = applicant;
-        this.magicPower = (int) ((Math.random() * (100 - 1)) + 1);
-        this.apparition = (int) ((Math.random() * (100 - 1)) + 1);
+    public Hogwarts(String faculty, String name, int magicPower, int apparition) {
+        this.faculty = faculty;
+        this. name = name;
+        this.magicPower = magicPower;
+        this.apparition = apparition;
     }
-    //Блок геттеров и сеттеров
-    public Applicant getApplicant() {return applicant;}
+    //Блок геттеров
+    public String getFaculty() {return faculty;}
+    public String getName() {return name;}
     public int getMagicPower() {return magicPower;}
     public int getApparition() {return apparition;}
 
     @Override
     public String toString() {
-        return "Факультет " + applicant.getFaculty() +
-                ". Студент " + applicant.getName() +
+        return "Факультет " + getFaculty() +
+                ". Студент " + getName() +
                 ". Магическая сила " + magicPower +
                 ". Трансгрессия " + apparition;
     }
@@ -32,16 +35,16 @@ public class Hogwarts {
         public int getHonor() {return honor;}
         public int getBravery() {return bravery;}
 
-        public Griffyndor(Applicant applicant) {
-            super(applicant);
+        public Griffyndor(Hogwarts hogwarts) {
+            super(hogwarts.faculty, hogwarts.name, hogwarts.magicPower, hogwarts.apparition);
             this.nobility = (int) ((Math.random() * (100 - 1)) + 1);
             this.honor = (int) ((Math.random() * (100 - 1)) + 1);
             this.bravery = (int) ((Math.random() * (100 - 1)) + 1);
         }
         @Override
         public String toString() {
-            return "Факультет " + getApplicant().getFaculty() +
-                    ". Студент " + getApplicant().getName() +
+            return "Факультет " + getFaculty() +
+                    ". Студент " + getName() +
                     ". Благородство " + nobility +
                     ". Честь " + honor +
                     ". Храбрость " + bravery;
@@ -58,8 +61,8 @@ public class Hogwarts {
             public int getLoyalty() {return loyalty;}
             public int getHonesty() {return honesty;}
 
-            public Hufflepuff(Applicant applicant) {
-                super(applicant);
+            public Hufflepuff(Hogwarts hogwarts) {
+                super(hogwarts.faculty, hogwarts.name, hogwarts.magicPower, hogwarts.apparition);
                 this.diligence = (int) ((Math.random() * (100 - 1)) + 1);
                 this.loyalty = (int) ((Math.random() * (100 - 1)) + 1);
                 this.honesty = (int) ((Math.random() * (100 - 1)) + 1);
@@ -67,8 +70,8 @@ public class Hogwarts {
 
             @Override
             public String toString() {
-                return "Факультет " + getApplicant().getFaculty() +
-                        ". Студент " + getApplicant().getName() +
+                return "Факультет " + getFaculty() +
+                        ". Студент " + getName() +
                         ". Трудолюбие " + diligence +
                         ". Верность " + loyalty +
                         ". Честность " + honesty;
@@ -87,8 +90,8 @@ public class Hogwarts {
             public int getWit() {return wit;}
             public int getCreative() {return creative;}
 
-            public RawenClow(Applicant applicant) {
-                super(applicant);
+            public RawenClow(Hogwarts hogwarts) {
+                super(hogwarts.faculty, hogwarts.name, hogwarts.magicPower, hogwarts.apparition);
                 this.intellect = (int) ((Math.random() * (100 - 1)) + 1);
                 this.wisdom = (int) ((Math.random() * (100 - 1)) + 1);
                 this.wit = (int) ((Math.random() * (100 - 1)) + 1);
@@ -97,8 +100,8 @@ public class Hogwarts {
 
             @Override
             public String toString() {
-                return "Факультет " + getApplicant().getFaculty() +
-                        ". Студент " + getApplicant().getName() +
+                return "Факультет " + getFaculty() +
+                        ". Студент " + getName() +
                         ". Ум " + intellect +
                         ". Мудрость " + wisdom +
                         ". Остроумие " + wit +
@@ -120,8 +123,8 @@ public class Hogwarts {
             public int getResourcefulness() {return resourcefulness;}
             public int getPowerthirst() {return powerthirst;}
 
-            public Slytherin(Applicant applicant) {
-                super(applicant);
+            public Slytherin(Hogwarts hogwarts) {
+                super(hogwarts.faculty, hogwarts.name, hogwarts.magicPower, hogwarts.apparition);
                 this.trick = (int) ((Math.random() * (100 - 1)) + 1);
                 this.resolute = (int) ((Math.random() * (100 - 1)) + 1);
                 this.ambition = (int) ((Math.random() * (100 - 1)) + 1);
@@ -131,8 +134,8 @@ public class Hogwarts {
 
             @Override
             public String toString() {
-                return "Факультет " + getApplicant().getFaculty() +
-                        ". Студент " + getApplicant().getName() +
+                return "Факультет " + getFaculty() +
+                        ". Студент " + getName() +
                         ". Хитрость " + trick +
                         ". Решительность " + resolute +
                         ". Амбициозность " + ambition +
