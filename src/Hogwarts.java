@@ -25,7 +25,7 @@ public class Hogwarts {
                 ". Трансгрессия " + apparition;
     }
 
-    public static class Griffyndor extends Hogwarts {
+    public static class Gryffindor extends Hogwarts {
         private final int nobility;
         private final int honor;
         private final int bravery;
@@ -37,7 +37,7 @@ public class Hogwarts {
         public int getBravery() {return bravery;}
         public int getSkill() {return skill;}
 
-        public Griffyndor(Hogwarts hogwarts) {
+        public Gryffindor(Hogwarts hogwarts) {
             super(hogwarts.faculty, hogwarts.name, hogwarts.magicPower, hogwarts.apparition);
             this.nobility = (int) ((Math.random() * (100 - 1)) + 1);
             this.honor = (int) ((Math.random() * (100 - 1)) + 1);
@@ -54,6 +54,7 @@ public class Hogwarts {
                     ". Магическая сила " +getMagicPower() +
                     ". Трансгрессия " +getApparition();
         }
+
     }
 
         public static class Hufflepuff extends Hogwarts {
@@ -175,30 +176,6 @@ public class Hogwarts {
                 System.out.println("Кунг-фу обоих дятлов равное");
             }
     }
-
-
-    public void facultyStudentsCompare(Hogwarts hogwarts1, Hogwarts hogwarts2) {
-        if (hogwarts1.getFaculty().equals(hogwarts2.getFaculty())) {
-
-
-            int temporary1 = hogwarts1.;
-            int temporary2 = hogwarts2.getMagicPower()+hogwarts2.getApparition();
-
-        } else {
-            System.out.println("Студенты с разных факультетов, сравнение не может быть сделано");
-        }
-
-
-        if (temporary1 > temporary2) {
-            System.out.println(hogwarts1.getName() +" Обладает большей мощностью магии чем " +hogwarts2.getName());
-        } else if (temporary1 < temporary2) {
-            System.out.println(hogwarts2.getName() + " Обладает большей мощностью магии чем " + hogwarts1.getName());
-        } else {
-            System.out.println("Кунг-фу обоих дятлов равное");
-        }
-    }
-
-
 }
 
 
