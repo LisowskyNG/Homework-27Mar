@@ -65,19 +65,25 @@ public class Main {
         a.globalyStudentsCompare(a,b);
 
         // сравнение учеников внутри каждого факультета
-        Hogwarts c = hogwartsStudents[9];
-        Hogwarts d = hogwartsStudents[10];
-        //a.facultyStudentsCompare(c, d);
+        //Гриффиндор
+        Hogwarts.Gryffindor c = gryffindorsStudents[2];
+        Hogwarts.Gryffindor d = gryffindorsStudents[0];
+        c.compareGryffindor(c, d);
 
+        //Пуффендуй
+        Hogwarts.Hufflepuff e = hufflepuffsStudents[1];
+        Hogwarts.Hufflepuff f = hufflepuffsStudents[2];
+        e.compareHufflepuff(e, f);
 
+        //Когтевран
+        Hogwarts.RawenClow g = rawenClowsStudents[1];
+        Hogwarts.RawenClow h = rawenClowsStudents[2];
+        g.compareRawenclow(g, h);
 
-
-
-
-
-
-
-
+        // Слизерин
+        Hogwarts.Slytherin i = slytherinsStudents[0];
+        Hogwarts.Slytherin ii = slytherinsStudents[1];
+        i.compareSlytherin(i, ii);
 
     }
 }

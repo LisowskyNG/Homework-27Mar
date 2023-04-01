@@ -55,6 +55,17 @@ public class Hogwarts {
                     ". Трансгрессия " +getApparition();
         }
 
+        public void compareGryffindor(Gryffindor gryffindor1, Gryffindor gryffindor2) {
+            int temporary1 = gryffindor1.getNobility()+gryffindor1.getHonor()+gryffindor1.getBravery();
+            int temporary2 = gryffindor2.getNobility()+gryffindor2.getHonor()+gryffindor2.getBravery();
+            if (temporary1 > temporary2) {
+                System.out.println(gryffindor1.getName() +" лучший Гриффиндорец чем " +gryffindor2.getName());
+            } else if (temporary1 < temporary2) {
+                System.out.println(gryffindor2.getName() + " лучший Гриффиндорец чем " + gryffindor1.getName());
+            } else {
+                System.out.println("Кунг-фу обоих Гриффиндорских дятлов равное");
+            }
+        }
     }
 
         public static class Hufflepuff extends Hogwarts {
@@ -87,6 +98,18 @@ public class Hogwarts {
                         ". Магическая сила " +getMagicPower() +
                         ". Трансгрессия " +getApparition();
             }
+            public void compareHufflepuff (Hufflepuff hufflepuff1, Hufflepuff hufflepuff2) {
+                int temporary1 = hufflepuff1.getDiligence()+hufflepuff1.getLoyalty()+hufflepuff1.getHonesty();
+                int temporary2 = hufflepuff2.getDiligence()+hufflepuff2.getLoyalty()+hufflepuff2.getHonesty();
+                if (temporary1 > temporary2) {
+                    System.out.println(hufflepuff1.getName() +" лучший Пуффендуец чем " +hufflepuff2.getName());
+                } else if (temporary1 < temporary2) {
+                    System.out.println(hufflepuff2.getName() + " лучший Пуффендуец чем " + hufflepuff1.getName());
+                } else {
+                    System.out.println("Кунг-фу обоих Пуффендуйских дятлов равное");
+                }
+            }
+
         }
 
         public static class RawenClow extends Hogwarts {
@@ -123,6 +146,19 @@ public class Hogwarts {
                         ". Магическая сила " +getMagicPower() +
                         ". Трансгрессия " +getApparition();
             }
+            public void compareRawenclow (RawenClow rawenclow1, RawenClow rawenclow2) {
+                int temporary1 = rawenclow1.getIntellect()+rawenclow1.getWisdom()+rawenclow1.getWit()+rawenclow1.getCreative();
+                int temporary2 = rawenclow2.getIntellect()+rawenclow2.getWisdom()+rawenclow2.getWit()+rawenclow2.getCreative();
+                if (temporary1 > temporary2) {
+                    System.out.println(rawenclow1.getName() +" лучший Когтеврановец чем " +rawenclow2.getName());
+                } else if (temporary1 < temporary2) {
+                    System.out.println(rawenclow2.getName() + " лучший Когтеврановец чем " + rawenclow1.getName());
+                } else {
+                    System.out.println("Кунг-фу обоих Когтевранских дятлов равное");
+                }
+            }
+
+
         }
 
         public static class Slytherin extends Hogwarts {
@@ -163,6 +199,21 @@ public class Hogwarts {
                         ". Магическая сила " +getMagicPower() +
                         ". Трансгрессия " +getApparition();
             }
+            public void compareSlytherin (Slytherin slytherin1, Slytherin slytherin2) {
+                int temporary1 = slytherin1.getTrick() + slytherin1.getResolute()+slytherin1.getAmbition()+slytherin1.getResourcefulness()+slytherin1.getPowerthirst();
+                int temporary2 = slytherin2.getTrick() + slytherin2.getResolute()+slytherin2.getAmbition()+slytherin2.getResourcefulness()+slytherin2.getPowerthirst();
+                if (temporary1 > temporary2) {
+                    System.out.println(slytherin1.getName() +" лучший Слизеринец чем " +slytherin2.getName());
+                } else if (temporary1 < temporary2) {
+                    System.out.println(slytherin2.getName() + " лучший Слизеринец чем " + slytherin1.getName());
+                } else {
+                    System.out.println("Кунг-фу обоих Слизеринских дятлов равное");
+                }
+            }
+
+
+
+
         }
 
     public void globalyStudentsCompare(Hogwarts hogwarts1, Hogwarts hogwarts2) {
