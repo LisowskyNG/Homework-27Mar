@@ -1,10 +1,10 @@
 public class Main {
 
     static Hogwarts[] hogwartsStudents = new Hogwarts[12];
-    static Hogwarts.Gryffindor[] gryffindorsStudents = new Hogwarts.Gryffindor[3];
-    static Hogwarts.Hufflepuff[] hufflepuffsStudents = new Hogwarts.Hufflepuff[3];
-    static Hogwarts.RawenClow[] rawenClowsStudents = new Hogwarts.RawenClow[3];
-    static Hogwarts.Slytherin[] slytherinsStudents = new Hogwarts.Slytherin[3];
+    static Gryffindor[] gryffindorsStudents = new Gryffindor[3];
+    static Hufflepuff[] hufflepuffsStudents = new Hufflepuff[3];
+    static RawenClow[] rawenClowsStudents = new RawenClow[3];
+    static Slytherin[] slytherinsStudents = new Slytherin[3];
 
     public static void main(String[] args) {
 
@@ -23,67 +23,68 @@ public class Main {
         hogwartsStudents[11] = new Hogwarts("Slytherin", "Gregory Goyle", 44, 99);
 
         // Распределяем студентов согласно выбранных факультетов, тестируем и присваиваем величину уникальных характеристик.
-            int j = 0;
-            int k = 0;
-            int l = 0;
-            int m = 0;
+        int j = 0;
+        int k = 0;
+        int l = 0;
+        int m = 0;
         for (Hogwarts hogwartsStudent : hogwartsStudents) {
-            if (hogwartsStudent.getFaculty().equals("Gryffindor")) {
-                gryffindorsStudents[j] = new Hogwarts.Gryffindor(hogwartsStudent);
-                j++;
+            switch (hogwartsStudent.getFaculty()) {
+                case "Gryffindor":
+                    gryffindorsStudents[j] = new Gryffindor(hogwartsStudent);
+                    j++;
 
-            } else if (hogwartsStudent.getFaculty().equals("Hufflepuff")) {
-                hufflepuffsStudents[k] = new Hogwarts.Hufflepuff(hogwartsStudent);
-                k++;
+                    break;
+                case "Hufflepuff":
+                    hufflepuffsStudents[k] = new Hufflepuff(hogwartsStudent);
+                    k++;
 
-            } else if (hogwartsStudent.getFaculty().equals("Raven claw")) {
-                rawenClowsStudents[l] = new Hogwarts.RawenClow(hogwartsStudent);
-                l++;
+                    break;
+                case "Raven claw":
+                    rawenClowsStudents[l] = new RawenClow(hogwartsStudent);
+                    l++;
 
-            } else if (hogwartsStudent.getFaculty().equals("Slytherin")) {
-                slytherinsStudents[m] = new Hogwarts.Slytherin(hogwartsStudent);
-                m++;
+                    break;
+                case "Slytherin":
+                    slytherinsStudents[m] = new Slytherin(hogwartsStudent);
+                    m++;
+                    break;
             }
         }
-    //Распечатываем студентов всех факультетов со всеми характеристиками используя методы факультетных класов
+        //Распечатываем студентов всех факультетов со всеми характеристиками используя методы факультетных класов
         for (int i = 0; i < gryffindorsStudents.length; i++) {
             System.out.println();
         }
-        for (int i = 0; i < hufflepuffsStudents.length; i++) {
-            System.out.println(hufflepuffsStudents[i]);
+        for (Hufflepuff hufflepuffsStudent : hufflepuffsStudents) {
+            System.out.println(hufflepuffsStudent);
         }
-        for (int i = 0; i < rawenClowsStudents.length; i++) {
-            System.out.println(rawenClowsStudents[i]);
+        for (RawenClow rawenClowsStudent : rawenClowsStudents) {
+            System.out.println(rawenClowsStudent);
         }
-        for (int i = 0; i < slytherinsStudents.length; i++) {
-            System.out.println(slytherinsStudents[i]);
+        for (Slytherin slytherinsStudent : slytherinsStudents) {
+            System.out.println(slytherinsStudent);
         }
         System.out.println();
+
         // сравнение мощности магии среди всех студентов
-        Hogwarts a = hogwartsStudents[1];
-        Hogwarts b = hogwartsStudents[9];
-        a.globalyStudentsCompare(a,b);
+        System.out.println("Сравнение студентов Хогвартса");
+        Hogwarts.globalyStudentsCompare(hogwartsStudents[1],hogwartsStudents[10]);
 
         // сравнение учеников внутри каждого факультета
         //Гриффиндор
-        Hogwarts.Gryffindor c = gryffindorsStudents[2];
-        Hogwarts.Gryffindor d = gryffindorsStudents[0];
-        c.compareGryffindor(c, d);
+        System.out.println("Сравнение студентов факультета Гриффиндор");
+        Gryffindor.compareGryffindor(gryffindorsStudents[2], gryffindorsStudents[0]);
 
         //Пуффендуй
-        Hogwarts.Hufflepuff e = hufflepuffsStudents[1];
-        Hogwarts.Hufflepuff f = hufflepuffsStudents[2];
-        e.compareHufflepuff(e, f);
+        System.out.println("Сравнение студентов факультета Пуффендуй");
+        Hufflepuff.compareHufflepuff(hufflepuffsStudents[1], hufflepuffsStudents[2]);
 
         //Когтевран
-        Hogwarts.RawenClow g = rawenClowsStudents[1];
-        Hogwarts.RawenClow h = rawenClowsStudents[2];
-        g.compareRawenclow(g, h);
+        System.out.println("Сравнение студентов факультета Когтевран");
+        RawenClow.compareRawenclow(rawenClowsStudents[1], rawenClowsStudents[2]);
 
         // Слизерин
-        Hogwarts.Slytherin i = slytherinsStudents[0];
-        Hogwarts.Slytherin ii = slytherinsStudents[1];
-        i.compareSlytherin(i, ii);
+        System.out.println("Сравнение студентов факультета Слизерин");
+        Slytherin.compareSlytherin(slytherinsStudents[0], slytherinsStudents[1]);
 
     }
 }
